@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+	float valorCompra ,valorFinal;
+	int opcao;
+	
+	printf("digite o valor daa compra: ");
+	scanf("%f",&valorCompra);
+	
+	printf("Escolha a forma de pagamento:\n");
+    printf("1 - A vista (10% de desconto)\n");
+    printf("2 - 30 dias (5% de desconto)\n");
+    printf("3 - 60 dias (sem desconto)\n");
+    printf("4 - 90 dias (5% de acrescimo)\n");
+    printf("Opcao: ");
+    scanf("%d",&opcao);
+    
+    if (opcao == 1) 
+	{  valorFinal = valorCompra * 0.90;
+    }
+	else if (opcao == 2) 
+	{valorFinal = valorCompra * 0.95;
+    } 
+	else if (opcao == 3) 
+	{valorFinal = valorCompra;
+    } 
+	else if (opcao == 4) 
+	{valorFinal = valorCompra * 1.05;
+    } 
+	else 
+	{printf("\nOpcao de pagamento invalida!\n");
+	valorFinal = 0;
+    }
+    printf("\nValor a ser pago: R$ %.2f\n", valorFinal);	
+}
